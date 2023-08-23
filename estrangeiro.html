@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeroporto</title>
+</head>
+<body>
+    <h1>Sistema de Estrangeiros</h1>
+    Qual pais vc mora: <input type="text">
+    <input type="button" value="Verificar" onclick="pesquisar()">
+    <div id="res"></div>
+
+    <script>
+    function pesquisar() {
+        var cit = window.document.getElementById('cit')
+        var res = window.document.getElementById('res')
+        res.innerHTML = `<p> Sua localização atua e ${cit}! </p>`
+        if (cit == brasil) {
+            res.innerHTML = `<p> Voce e Brasileiro(a) </p>`
+        } else {
+            res.innerHTML = `Voce e Estrangeiro(a)`
+         }
+    }
+    </script>
+</body>
+</html>
